@@ -65,7 +65,7 @@ public class ProductServiceImpl implements ProductService {
         if (productRepository.findById(id).isEmpty()) {
             throw new IllegalArgumentException("Product with ID " + id + " not found.");
         }
-        productRepository.delete(id);
+        productRepository.deleteById(id);
     }
 
     private ProductDTO toDTO(Product product) {

@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "853fa397-45b6-4d78-a138-986278dad91f",
+		"name": "desarrollo seguro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10597013",
+		"_collection_link": "https://planetary-comet-944420.postman.co/workspace/New-Team-Workspace~69f48874-6b93-48e4-99c1-351855c8e34b/collection/10597013-853fa397-45b6-4d78-a138-986278dad91f?action=share&source=collection_link&creator=10597013"
+	},
+	"item": [
+		{
+			"name": "consultar por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/prod-123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"prod-123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"prod-123\",\n  \"name\": \"Laptop\",\n  \"price\": 1200.50,\n  \"stock\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:8080/api/products \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"id\": \"prod-123\",\n  \"name\": \"Laptop\",\n  \"price\": 1200.50,\n  \"stock\": 50\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"prod-123\",\n  \"name\": \"Gaming Laptop\",\n  \"price\": 1500.75,\n  \"stock\": 30\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/prod-123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"prod-123"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:8080/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/prod-123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"prod-123"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:8080/api/products/prod-123"
+			},
+			"response": []
+		}
+	]
+}

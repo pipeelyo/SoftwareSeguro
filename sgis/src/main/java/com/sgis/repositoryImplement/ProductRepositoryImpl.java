@@ -31,7 +31,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     }
 
     @Override
-    public void delete(String id) {
+    public void deleteById(String id) {
         products.remove(id);
     }
 }
